@@ -16,6 +16,14 @@ public class CarController {
      public Iterable<Car> getCars() {
        return repository.findAll();
      }
+	 
+	 @Autowired
+     private CarRepository repository1;
+
+	 @RequestMapping("/carsdate2017")
+     public Iterable<Car> getCars2017() {
+       return repository1.findByYear(2017);
+     }
 
 
 }
