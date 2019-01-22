@@ -19,7 +19,6 @@ public class AhmadnajjarApplication {
     SpringApplication.run(AhmadnajjarApplication.class, args);
 
   }
-
   @Bean
   CommandLineRunner runner(){
     return args -> {
