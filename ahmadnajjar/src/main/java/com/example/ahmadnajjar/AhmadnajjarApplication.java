@@ -28,16 +28,17 @@ public class AhmadnajjarApplication {
   CommandLineRunner runner(){
     return args -> {
       // Save demo data to database
+        repository.deleteAll();
       repository.save(new Car("Ford", "Mustang", "Red",
        "ADF-1121", 2017, 59000));
       repository.save(new Car("Nissan", "Leaf", "White",
-       "SSJ-3002", 2014, 29000));    
+       "SSJ-3002", 2014, 59000));    
        repository.save(new Car("Toyota", "Prius", "Silver",
        "KKO-0212", 2018, 39000));
        
-//       repository1.save("haifa", "israel", 10 , 50);
-//       repository1.save(new Trip("telaviv", "israel", 11 , 100));
-//       repository1.save(new Trip("jerusalem", "moscow", 12 , 200));
+       repository1.save(new Trip("haifa", "israel", 10 , 50));
+       repository1.save(new Trip("telaviv", "israel", 11 , 100));
+       repository1.save(new Trip("jerusalem", "moscow", 12 , 200));
     };
   } 
 }
